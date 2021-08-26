@@ -1,13 +1,17 @@
 import logo from './logo.svg';
+import tire from './tire.png';
 import './App.css';
+import MapContainer from './MapContainer';
+import NavBar from './NavBar';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <NavBar/>
+        <img src={tire} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          The one stop solution for making travelling easy.
         </p>
         <a
           className="App-link"
@@ -18,6 +22,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <MapContainer />
     </div>
   );
 }
