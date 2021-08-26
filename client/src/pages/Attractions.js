@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SmallButton } from '../styles';
+import { SmallButton, Label, Input } from '../styles';
 import { Link } from 'react-router-dom';
 
 function Attractions() {
+    const [searchAttractions, setSearchAttractions] = useState("");
+
     return (
         <>
         <SmallButton as={Link} to="/">Back</SmallButton>
@@ -11,6 +13,22 @@ function Attractions() {
             <h1>Unleash your inner explorer.</h1>
             <Divider/>
             <p>Find something to do in your area for any occasion.</p>
+            {/* 
+            I want to be able to use resources
+            for public parks, museums, local events and
+            festivals to be able to create
+            a community hub in the palm of your hand
+            */}
+            <WrapperChild>
+                <Label>Discover Attractions</Label>
+                <Input
+                type="text"
+                id="searchAttractions"
+                value={searchAttractions}
+                onChange={(e) => setSearchAttractions(e.target.value)}
+                placeholder="What most interests you? (Museums, Parks, Clubs, etc)"
+                />
+            </WrapperChild>
         </Wrapper>
         </>
     )
