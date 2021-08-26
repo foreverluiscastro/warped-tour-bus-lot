@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
-function MapContainer() {
+function MapContainer({ lat, lng, status}) {
 
     const mapStyles = {
         height: "100vh",
         width: "100%"
     };
 
-    const defaultCenter = {
-        lat: 41.3851, lng: 2.1734
-    }
+    const currentLocation = {
+        lat: lat,
+        lng: lng
+    };
 
     return (
         <>
@@ -18,7 +19,7 @@ function MapContainer() {
             <GoogleMap
                 mapContainerStyle={mapStyles}
                 zoom={13}
-                center={defaultCenter}
+                center={currentLocation}
             />
         </LoadScript>
         </>
