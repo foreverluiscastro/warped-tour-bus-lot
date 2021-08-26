@@ -29,6 +29,7 @@ function Lodging() {
                 onChange={(e) => setSearchLodging(e.target.value)}
                 placeholder="Where do you want to stay? (Hotel, Airbnb, Hostel, Campground etc.)"
                 />
+                <SmallButton>Search</SmallButton>
             </WrapperChild>
         </Wrapper>
         </>

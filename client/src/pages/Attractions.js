@@ -28,6 +28,7 @@ function Attractions() {
                 onChange={(e) => setSearchAttractions(e.target.value)}
                 placeholder="What most interests you? (Museums, Parks, Clubs, etc)"
                 />
+                <SmallButton>Search</SmallButton>
             </WrapperChild>
         </Wrapper>
         </>

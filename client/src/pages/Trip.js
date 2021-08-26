@@ -38,6 +38,7 @@ function Trip() {
             onChange={(e) => setEndDestination(e.target.value)}
             placeholder="Where are you going?"
             />
+            <SmallButton>Search</SmallButton>
             </WrapperChild>
         </Wrapper>
         </>

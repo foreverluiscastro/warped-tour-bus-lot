@@ -29,6 +29,7 @@ function Food() {
                 onChange={(e) => setSearchFood(e.target.value)}
                 placeholder="What are you feeling?"
                 />
+                <SmallButton>Search</SmallButton>
             </WrapperChild>
         </Wrapper>
         </>
