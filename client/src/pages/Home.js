@@ -25,4 +25,14 @@ const Wrapper = styled.section`
     display: flex;
 `;
 
+const WrapperChild = styled.div`
+  display: flex;
+`;
+
+const Divider = styled.hr`
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 16px 0;
+`;
+
 export default Home;

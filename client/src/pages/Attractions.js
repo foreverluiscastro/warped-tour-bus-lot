@@ -9,6 +9,7 @@ function Attractions() {
         <SmallButton as={Link} to="/">Back</SmallButton>
         <Wrapper>
             <h1>Unleash your inner explorer.</h1>
+            <Divider/>
             <p>Find something to do in your area for any occasion.</p>
         </Wrapper>
         </>
@@ -23,6 +24,16 @@ const Wrapper = styled.section`
   border-radius: 6px;
   box-shadow: 0 0.5em 10em -0.125em rgb(10 10 10 / 25%),
     0 0 0 1px rgb(10 10 10 / 6%);
+`;
+
+const WrapperChild = styled.div`
+  display: flex;
+`;
+
+const Divider = styled.hr`
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 16px 0;
 `;
 
 export default Attractions;
