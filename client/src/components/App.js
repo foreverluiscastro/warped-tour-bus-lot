@@ -10,6 +10,7 @@ import Food from '../pages/Food';
 import Lodging from '../pages/Lodging';
 import Attractions from '../pages/Attractions';
 import { Button } from '../styles';
+import styled from 'styled-components';
 
 function App() {
   const [lat, setLat] = useState(null);
@@ -34,7 +35,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <NavBar/>
+      <Logo>
+        The Road Tripper
+      </Logo>
         <img src={tire} className="App-logo" alt="logo" />
         <h2>
           The one stop solution for making travelling easy!
@@ -58,5 +61,20 @@ function App() {
     </div>
   );
 }
+
+const Logo = styled.h1`
+  font-family: "Permanent Marker", cursive;
+  font-size: 4rem;
+  color: #00e0d7;
+  text-shadow: 3px 0 0 #000, 0 3px 0 #000, -3px 0 0 #000, 0 -3px 0 #000;
+  margin: 0;
+  line-height: 1;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+`;
+
 
 export default App;

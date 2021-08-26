@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SmallButton } from '../styles';
+import { Input, Label, SmallButton } from '../styles';
 import { Link } from 'react-router-dom';
 
 function Lodging() {
+    const [searchLodging, setSearchLodging] = useState("");
+
     return (
         <>
         <SmallButton as={Link} to="/">Back</SmallButton>
@@ -11,6 +13,23 @@ function Lodging() {
             <h1>Find a place to recharge.</h1>
             <Divider/>
             <p>Nothing beats a nice warm bath and soft bed to sleep in.</p>
+            {/* 
+            The goal is to be able to look up a specific
+            type of lodging and uses resources to find
+            the best results. Emphasis on being able to use
+            search feature to be able to find homeless shelters
+            in the area for nomadic peoples.
+            */}
+            <WrapperChild>
+                <Label htmlFor="searchLodging">Search Lodging</Label>
+                <Input
+                type="text"
+                id="searchLodging"
+                value={searchLodging}
+                onChange={(e) => setSearchLodging(e.target.value)}
+                placeholder="Where do you want to stay? (Hotel, Airbnb, Hostel, Campground etc.)"
+                />
+            </WrapperChild>
         </Wrapper>
         </>
     )

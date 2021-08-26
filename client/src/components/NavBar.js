@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 // import { Button } from "../styles";
 
@@ -7,7 +6,7 @@ function NavBar() {
   
   return (
     <Wrapper>
-      <Logo as={Link} to="/">
+      <Logo>
         The Road Tripper
       </Logo>
       <Nav>
