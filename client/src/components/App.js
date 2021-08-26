@@ -54,7 +54,7 @@ function App() {
         </Switch>
       <Button color="secondary" onClick={getLocation}>Use my current location</Button>
       </main>
-      <MapContainer lat={lat} lng={lng} status={status}/>
+      <MapContainer lat={lat} lng={lng}/>
     </div>
   );
 }

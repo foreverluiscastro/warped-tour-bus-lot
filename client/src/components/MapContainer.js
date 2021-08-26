@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
-function MapContainer({ lat, lng, status}) {
+function MapContainer({ lat, lng}) {
 
     const mapStyles = {
         height: "100vh",
