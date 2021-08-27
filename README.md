@@ -44,6 +44,60 @@ simulate a similar environment in development.
 There are a few areas of the code that differ from the typical Rails API
 setup that merit explanation.
 
+### Using Styled Components
+
+To use styled components, you must include it in your dependencies in your `package.json` before you run bundle install. Once you have the dependency installed, you can define the component in the js file like:
+
+```js
+// src/pages/Home.js
+
+// import styled components
+import styled from 'styled-components'
+
+// Define the component
+const Wrapper = styled.section`
+add your css here!
+`;
+```
+
+but if you have a component that you will reuse throughout development, define a new `.js` file in `/styles` and import and export it in the `index.js` file in the same directory. For example, I created a component called `Button` that I reuse in the home page. The process to use this button goes as follows:
+
+```js
+// Define the component in /styles
+
+// src/styles/Button.js
+
+// remeber to import styled components to be able to style using css
+import styled from "styled-components";
+
+function Button() {
+    // all of the logic of the button here
+    return <Component />;
+}
+
+// all your css styling goes here
+const StyleExample = styled.section`
+
+`;
+
+// don't forget to export
+export default Button;
+```
+
+then, you will import and export the component in the `index.js` file in the `/styles` directory.
+
+```js
+// src/styles/index.js
+
+// import the component
+import Button from './Button';
+
+//export the component
+export { Button };
+```
+
+This will allow you to use this component anywhere in your app by simply import the componments `from '../styles'`.
+
 ### Cookies/Sessions Setup
 
 By default, when generating a new Rails app in API mode, the middleware for
