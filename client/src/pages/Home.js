@@ -2,14 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button } from '../styles';
 import { Link } from 'react-router-dom';
+import car from '../car.png';
+import food from '../food.png';
+import moon from '../moon.png';
+import resting from '../resting.png';
+import '../App.css';
+
 
 function Home() {
     return (
         <Wrapper>
-          <Button as={Link} to="/trips">Plan A Trip</Button>
-          <Button as={Link} to="/food">Look For Food</Button>
-          <Button as={Link} to="/lodging">Get Some Sleep</Button>
-          <Button as={Link} to="/attractions">Enjoy Yourself</Button>
+          <Button as={Link} to="/trips" color="trip"><img src={car} className="page-avatar" alt="avatar"/>Plan A Trip</Button>
+          <Button as={Link} to="/food" color="food"><img src={food} className="page-avatar" alt="avatar"/>Look For Food</Button>
+          <Button as={Link} to="/lodging"><img src={moon} className="page-avatar" alt="avatar"/>Get Sleep</Button>
+          <Button as={Link} to="/attractions" color="attractions"><img src={resting} className="page-avatar" alt="avatar"/>Enjoy Yourself</Button>
         </Wrapper>
     )
 }

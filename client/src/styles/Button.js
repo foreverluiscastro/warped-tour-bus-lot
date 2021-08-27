@@ -9,6 +9,15 @@ const COLORS = {
     "--main": "lavenderblush",
     "--accent": "indigo",
   },
+  trip: {
+    "--main":"#9dc183"
+  },
+  food: {
+    "--main":"#89cff0"
+  },
+  attractions: {
+    "--main":"#ffed5f"
+  }
 };
 
 function Button({ variant = "fill", color = "primary", ...props }) {
@@ -29,6 +38,8 @@ const ButtonBase = styled.button`
   border-radius: 6px;
   padding: 8px 16px;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
 `;
 
 const FillButton = styled(ButtonBase)`

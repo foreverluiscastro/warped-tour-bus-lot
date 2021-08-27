@@ -1,24 +1,27 @@
-# README
+# Road Tripper App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app uses a Rails API and React frontend. For ease of deployment, both projects are contained in the same repository. All the React Code is in the `/client` directory during development.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+To run this app you need to have the latest version of Ruby, Rails, Bundler, NPM and Postgres installed.
 
-* System dependencies
+To run the app locally, install Rails and React dependencies and set up the database. This app uses Postgresql as a database.
 
-* Configuration
+```sh
+bundle install
+rails db:create db:migrate
+npm install --prefix client
+sudo service postgresql start
+```
+## Running the App locally
 
-* Database creation
+Click on the icon of a box split down the middle located in your terminal. This will create a Split terminal that will allow you to see the frontend and backend simultaniously. Run each command in it's own respective terminal to start the frontend and backend servers:
 
-* Database initialization
+```sh
+npm start --prefix client
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+rails s
+```
