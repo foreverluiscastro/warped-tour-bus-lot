@@ -39,9 +39,9 @@ fetch("/me").then((r) => r.json());
 Since our deployed app will run on the same domain, this is a good way to
 simulate a similar environment in development.
 
-## Code Explanations
+## Code Explanations - Frontend
 
-There are a few areas of the code that differ from the typical Rails API
+There are a few areas of the code that differ from the typical React App
 setup that merit explanation.
 
 ### Using Styled Components
@@ -97,6 +97,11 @@ export { Button };
 ```
 
 This will allow you to use this component anywhere in your app by simply import the componments `from '../styles'`.
+
+## Code Explanations - backend
+
+There are a few areas of the code that differ from the typical Rails API
+setup that merit explanation.
 
 ### Cookies/Sessions Setup
 
